@@ -1,0 +1,74 @@
+.buttonGroup {
+  display: flex;
+  margin-top: auto;
+  padding-top: 30px;
+
+  .buttonAll {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .buttonAll:hover {
+    box-shadow: 7px 5px 56px -14px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .buttonAll:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .buttonActive {
+    width: 100%;
+    padding: 5px;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .buttonActive:hover {
+    box-shadow: 7px 5px 56px -14px var(--color-info-700);
+    background: var(--color-info-700);
+  }
+
+  .buttonActive:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px var(--color-info-700);
+    background: var(--color-info-700);
+  }
+
+  .buttonComplete {
+    width: 100%;
+    padding: 5px;
+    border-radius: 0 5px 5px 0;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .buttonComplete:hover {
+    box-shadow: 7px 5px 56px -14px var(--color-success-500);
+    background: var(--color-success-500);
+  }
+
+  .buttonComplete:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px var(--color-success-500);
+    background: var(--color-success-500);
+  }
+}
