@@ -1,14 +1,21 @@
-import React from 'react'
+import { Provider } from 'react-redux'
 
-import { App } from '@/App'
-import ReactDOM from 'react-dom/client'
+import { App } from '@/application'
+import store, { persistor } from '@/redux/store'
+import { createRoot } from 'react-dom/client'
+import { PersistGate } from 'redux-persist/es/integration/react'
 
 import './styles/index.scss'
-import '@fontsource/roboto/400.css'
-import '@fontsource/roboto/700.css'
+import '@fontsource/montserrat/400.css'
+import '@fontsource/montserrat/700.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const container = document.getElementById('root') as HTMLElement
+const root = createRoot(container)
+
+root.render(
+  <Provider store={store}>
+    <PersistGate loading={'Loading...'} persistor={persistor}>
+      <App />
+    </PersistGate>
+  </Provider>
 )
