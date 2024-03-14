@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90vw;
+  height: 80vh;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-300);
+    border-radius: 3px;
+
+    &:hover {
+      background-color: var(--color-dark-100);
+    }
+  }
+
+  border: 2px solid var(--color-accent-500);
+  border-radius: 10px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
