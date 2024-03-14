@@ -1,0 +1,66 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .inputButtonBlock {
+    display: flex;
+  }
+
+  .input {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition:
+      border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+      color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+      background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-light-100);
+    transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+  }
+
+  .input:hover,
+  .input:focus,
+  .inputGroup:hover .input {
+    outline: none;
+    border-color: var(--color-accent-500);
+  }
+
+  .inputGroup:hover,
+  .input:focus {
+    color: var(--color-light-100);
+  }
+
+  .button {
+    width: max-content;
+    min-width: 10%;
+    border-radius: 0.5rem;
+    display: inline;
+    margin-left: 10px;
+    border: 2px solid var(--color-accent-500);
+    background-color: var(--color-accent-500);
+  }
+
+  .button:hover {
+    box-shadow: 7px 5px 56px -14px var(--color-accent-900);
+    background: var(--color-accent-900);
+    border: 2px solid var(--color-accent-900);
+  }
+
+  .button:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px var(--color-accent-900);
+    background: var(--color-accent-900);
+    border: 2px solid var(--color-accent-900);
+  }
+}
