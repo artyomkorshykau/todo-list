@@ -1,0 +1,12 @@
+.addTodoForm {
+  width: 368px;
+
+  & > input,
+  button {
+    height: 44px;
+  }
+
+  & > button {
+    width: 20%;
+  }
+}
