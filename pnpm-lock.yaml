@@ -17,6 +17,9 @@ dependencies:
   '@types/react-redux':
     specifier: ^7.1.24
     version: 7.1.33
+  '@types/redux-thunk':
+    specifier: ^2.1.0
+    version: 2.1.0(redux@5.0.1)
   '@types/uuid':
     specifier: ^9.0.8
     version: 9.0.8
@@ -832,6 +835,15 @@ packages:
     dependencies:
       redux: 4.2.1
     dev: true
+
+  /@types/redux-thunk@2.1.0(redux@5.0.1):
+    resolution: {integrity: sha512-8M+kcrnZQYO3A40d8a1lieBFur/ab8EXHqa2dGMQqsmBaVCbNp3gd8ed/HuSjLoLA63ov/trXaXWlkiKVF4VUw==}
+    deprecated: This is a stub types definition for Redux Thunk (https://github.com/gaearon/redux-thunk). Redux Thunk provides its own type definitions, so you don't need @types/redux-thunk installed!
+    dependencies:
+      redux-thunk: 3.1.0(redux@5.0.1)
+    transitivePeerDependencies:
+      - redux
+    dev: false
 
   /@types/scheduler@0.16.8:
     resolution: {integrity: sha512-WZLiwShhwLRmeV6zH+GkbOFT6Z6VklCItrDioxUnv+u4Ll+8vKeFySoFyK/0ctcRpOmwAicELfmys1sDc/Rw+A==}

@@ -1,11 +1,9 @@
 import configureStore from 'redux-mock-store'
-import { thunk } from 'redux-thunk'
 import { beforeEach, describe, expect, test } from 'vitest'
 
 import { taskActions } from '../taskSlice'
 
-const middlewares = [thunk]
-const mockStore = configureStore(middlewares)
+const mockStore = configureStore()
 
 describe('taskActions', () => {
   let store: any

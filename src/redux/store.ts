@@ -12,7 +12,6 @@ import {
   persistStore,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import { thunk } from 'redux-thunk'
 
 const rootReducer = combineReducers({
   task: taskSlice,
@@ -26,15 +25,13 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-const middleware = [thunk]
-
 const store = configureStore({
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(middleware),
+    }),
   reducer: persistedReducer,
 })
 
